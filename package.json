@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "find-unused-components": "./dist/cli.js"
+    "find-unused-components": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build:watch": "tsc --watch",
+    "start": "tsc && node dist/index.js"
   },
   "keywords": [],
   "author": "",
