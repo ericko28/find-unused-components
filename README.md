@@ -96,7 +96,6 @@ src/
 
 - [ ] Soporte para componentes globales de librerías externas
 - [ ] Modo interactivo para confirmar si un componente debe eliminarse
-- [ ] Opcional: generar reporte en Markdown o HTML
 
 ---
 

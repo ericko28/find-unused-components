@@ -1,14 +1,13 @@
-import fs from 'node:fs'
+import { generateHtmlReport } from '../report/htmlReport'
 
-export function saveUnusedReport(components, outputFile) {
+export function saveUnusedReport(components, type: 'html' | 'md') {
   const unused = components
     .filter((c) => !c.used)
     .map((c) => ({ path: c.relativePath }))
 
-  fs.writeFileSync(outputFile, JSON.stringify(unused, null, 2), 'utf-8')
+  if (type === 'html') generateHtmlReport(unused)
 
   console.log(`\n📦 Componentes totales: ${components.length}`)
   console.log(`✅ Usados: ${components.filter((c) => c.used).length}`)
   console.log(`❌ No usados: ${unused.length}`)
-  console.log(`📄 Resultado guardado en: ${outputFile}`)
 }
