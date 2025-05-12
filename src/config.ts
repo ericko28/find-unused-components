@@ -5,7 +5,7 @@ export function getProjectPaths() {
     const inputProjectPath = argProject ? argProject.split('=')[1] : null;
     const projectRoot = inputProjectPath ? path.resolve(inputProjectPath) : path.resolve(__dirname, './');
     const componentsDir = path.join(projectRoot, 'components');
-    const outputFile = path.join(projectRoot, 'unused-components.json');
+    const outputFile = path.join('.', 'unused-components.json');
 
     return { projectRoot, componentsDir, outputFile };
 }
