@@ -17,7 +17,6 @@ export function getProjectPaths() {
     ? path.resolve(options.project)
     : path.resolve(__dirname, './')
   const componentsDir = path.join(projectRoot, 'components')
-  const outputFile = path.join('.', 'unused-components.json')
 
-  return { projectRoot, componentsDir, outputFile, reporter }
+  return { projectRoot, componentsDir, reporter }
 }
